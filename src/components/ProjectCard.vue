@@ -15,9 +15,12 @@ export default {
             <div class="card-body">
                 <p>{{ project.content }}</p>
             </div>
-            <div class="card-footer">
-                <span class="me-3">{{ project.category.label }}</span>
-                <span>{{ project.lenguages[0].label }}</span>
+            <div class="card-footer d-flex justify-content-between align-items-center">
+                <div>
+                    <span class="me-3">{{ project.category.label }}</span>
+                    <span>{{ project.lenguages[0].label }}</span>
+                </div>
+                <RouterLink :to="{ name: 'show', params: { id: project.id } }" class="btn btn-primary">vedi</RouterLink>
             </div>
         </div>
     </main>
